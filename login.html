@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords"
+        content="ecommerce, market, shop, mart, cart, deal, multipurpose, marketplace">
+    <meta name="description" content="CarrotStore.">
+    <meta name="author" content="ashishmaraviya">
+
+    <title>Khánh-FoodStore</title>
+    
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/img/logo/favicon.png">
+
+    <!-- Icon CSS -->
+    <link rel="stylesheet" href="assets/css/vendor/materialdesignicons.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/remixicon.css">
+
+    <!-- Vendor -->
+    <link rel="stylesheet" href="assets/css/vendor/animate.css">
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/aos.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/range-slider.css">
+    <link rel="stylesheet" href="assets/css/vendor/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/jquery.slick.css">
+    <link rel="stylesheet" href="assets/css/vendor/slick-theme.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="body-bg-6">
+
+    <!-- Loader -->
+    <div id="cr-overlay">
+        <span class="loader"></span>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="top-header">
+                        <a href="index.html" class="cr-logo">
+                            <img src="assets/img/logo/logo.png" alt="logo" class="logo">
+                            <img src="assets/img/logo/dark-logo.png" alt="logo" class="dark-logo">
+                        </a>
+                        <form class="cr-search">
+                            <input class="search-input" type="text" placeholder="Tìm kiếm sản phẩm...">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>DANH MỤC</option>
+                                <option value="1">Thực phẩm nam giới</option>
+                                <option value="2">Thực phẩm nữ giới</option>
+                                <option value="3">Thực phẩm trung giới</option>
+                            </select>
+                            <a href="javascript:void(0)" class="search-btn">
+                                <i class="ri-search-line"></i>
+                            </a>
+                        </form>
+                        <div class="cr-right-bar">
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle cr-right-bar-item" href="javascript:void(0)">
+                                        <i class="ri-user-3-line"></i>
+                                        <span>Tài Khoản</span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="RegisterAccount.html">Đăng ký</a></li>
+                                        <li><a class="dropdown-item" href="checkout.html">Thanh toán</a></li>
+                                        <li><a class="dropdown-item" href="login.html">Đăng nhập</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <a href="wishlist.html" class="cr-right-bar-item">
+                                <i class="ri-heart-3-line"></i>
+                                <span>Danh sách yêu thích</span>
+                            </a>
+                            <a href="javascript:void(0)" class="cr-right-bar-item Shopping-toggle">
+                                <i class="ri-shopping-cart-line"></i>
+                                <span>Giỏ Hàng</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cr-fix" id="cr-main-menu-desk">
+            <div class="container">
+                <div class="cr-menu-list">
+                    <div class="cr-category-icon-block">
+                        <div class="cr-category-menu">
+                            <div class="cr-category-toggle">
+                                <i class="ri-menu-2-line"></i>
+                            </div>
+                        </div>
+                        <div class="cr-cat-dropdown">
+                            <div class="cr-cat-block">
+                                <div class="cr-cat-tab">
+                                    <div class="cr-tab-list nav flex-column nav-pills" id="v-pills-tab" role="tablist"
+                                        aria-orientation="vertical">
+                                        <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
+                                            data-bs-target="#v-pills-home" type="button" role="tab"
+                                            aria-controls="v-pills-home" aria-selected="true">
+                                            Bơ Sữa &amp; Bánh Mì</button>
+                                        <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
+                                            data-bs-target="#v-pills-profile" type="button" role="tab"
+                                            aria-controls="v-pills-profile" aria-selected="false" tabindex="-1">
+                                            Trái Cây &amp; Rau Quả</button>
+                                        <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                                            data-bs-target="#v-pills-messages" type="button" role="tab"
+                                            aria-controls="v-pills-messages" aria-selected="false" tabindex="-1">
+                                            Snack &amp; Gia Vị</button>
+                                        <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill"
+                                            data-bs-target="#v-pills-settings" type="button" role="tab"
+                                            aria-controls="v-pills-settings" aria-selected="false" tabindex="-1">
+                                            Nước ép &amp; Đồ Uống </button>
+                                        <a class="nav-link" href="listproduct.html">
+                                            Xem tất cả </a>
+                                    </div>
+                                    <div class="tab-content" id="v-pills-tabContent">
+                                        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                                            aria-labelledby="v-pills-home-tab">
+                                            <div class="tab-list row">
+                                                <div class="col">
+                                                    <h6 class="cr-col-title">BƠ</h6>
+                                                    <ul class="cat-list">
+                                                        <li><a href="listproduct.html">Sữa</a></li>
+                                                        <li><a href="listproduct.html">Kem</a></li>
+                                                        <li><a href="listproduct.html">Phô Mai</a></li>
+                                                        <li><a href="listproduct.html">Kem Trứng</a></li>
+                                                        <li><a href="listproduct.html">Sữa Chua</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col">
+                                                    <h6 class="cr-col-title">BÁNH</h6>
+                                                    <ul class="cat-list">
+                                                        <li><a href="listproduct.html">Bánh Quy và Bánh Ngọt</a></li>
+                                                        <li><a href="listproduct.html">Bánh Mì Nướng </a></li>
+                                                        <li><a href="listproduct.html">Bánh Bao &amp; Bánh Xèo</a></li>
+                                                        <li><a href="listproduct.html">Bánh Hạnh Nhân Socola</a></li>
+                                                        <li><a href="listproduct.html">Bánh Quy Cuộn Kem</a></li>
+                                                    </ul>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                                            aria-labelledby="v-pills-profile-tab">
+                                            <div class="tab-list row">
+                                                <div class="col">
+                                                    <h6 class="cr-col-title">Trái Cây</h6>
+                                                    <ul class="cat-list">
+                                                        <li><a href="listproduct.html">Táo</a></li>
+                                                        <li><a href="listproduct.html">Dưa hấu</a></li>
+                                                        <li><a href="listproduct.html">Nho</a></li>
+                                                        <li><a href="listproduct.html">Mãng cầu</a></li>
+                                                        <li><a href="listproduct.html">Măng cụt</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col">
+                                                    <h6 class="cr-col-title">Rau Quả</h6>
+                                                    <ul class="cat-list">
+                                                        <li><a href="listproduct.html">Súp lơ</a></li>
+                                                        <li><a href="listproduct.html">Ớt chuông</a></li>
+                                                        <li><a href="listproduct.html">Bông cải xanh</a></li>
+                                                        <li><a href="listproduct.html">Bắp cải</a></li>
+                                                        <li><a href="listproduct.html">Cà chua</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                                            aria-labelledby="v-pills-messages-tab">
+                                            <div class="tab-list row">
+                                                <div class="col">
+                                                    <h6 class="cr-col-title">SNACKS</h6>
+                                                    <ul class="cat-list">
+                                                        <li><a href="listproduct.html">Khoai tây chiên</a></li>
+                                                        <li><a href="listproduct.html">Lạp xưởng nướng đá</a></li>
+                                                        <li><a href="listproduct.html">Bánh tráng nướng</a></li>
+                                                        <li><a href="listproduct.html">Bắp rang bơ</a></li>
+                                                        <li><a href="listproduct.html">Gà KFC</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col">
+                                                    <h6 class="cr-col-title">GIA VỊ</h6>
+                                                    <ul class="cat-list">
+                                                        <li><a href="listproduct.html">Bột quế</a></li>
+                                                        <li><a href="listproduct.html">Muối</a></li>
+                                                        <li><a href="listproduct.html">Mì chính</a></li>
+                                                        <li><a href="listproduct.html">Hạt tiêu</a></li>
+                                                        <li><a href="listproduct.html">Đường</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
+                                            aria-labelledby="v-pills-settings-tab">
+                                            <div class="tab-list row">
+                                                <div class="col">
+                                                    <h6 class="cr-col-title">NƯỚC ÉP</h6>
+                                                    <ul class="cat-list">
+                                                        <li><a href="listproduct.html">Nước ép xoài</a></li>
+                                                        <li><a href="listproduct.html">Nước ép chuối</a></li>
+                                                        <li><a href="listproduct.html">Nước ép cam</a></li>
+                                                        <li><a href="listproduct.html">Nước ép táo</a></li>
+                                                        <li><a href="listproduct.html">Nước ép ổi</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col">
+                                                    <h6 class="cr-col-title">ĐỒ UỐNG</h6>
+                                                    <ul class="cat-list">
+                                                        <li><a href="listproduct.html">Coca Cola</a></li>
+                                                        <li><a href="listproduct.html">Bò húc</a></li>
+                                                        <li><a href="listproduct.html">Fanta</a></li>
+                                                        <li><a href="listproduct.html">7up</a></li>
+                                                        <li><a href="listproduct.html">Mirinda</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="navbar navbar-expand-lg">
+                        <a href="javascript:void(0)" class="navbar-toggler shadow-none">
+                            <i class="ri-menu-3-line"></i>
+                        </a>
+                        <div class="cr-header-buttons">
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link" href="javascript:void(0)">
+                                        <i class="ri-user-3-line"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="RegisterAccount.html">Đăng Ký</a></li>
+                                        <li><a class="dropdown-item" href="checkout.html">Thanh Toán</a></li>
+                                        <li><a class="dropdown-item" href="login.html">Đăng Nhập</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <a href="wishlist.html" class="cr-right-bar-item">
+                                <i class="ri-heart-line"></i>
+                            </a>
+                            <a href="javascript:void(0)" class="cr-right-bar-item Shopping-toggle">
+                                <i class="ri-shopping-cart-line"></i>
+                            </a>
+                        </div>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html">TRANG CHỦ</a>
+                                </li>                           
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="javascript:void(0)">SẢN PHẨM</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="listproduct.html">Mua sắm</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="javascript:void(0)">TRANG</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="about.html">Về chúng tôi</a></li>
+                                        <li><a class="dropdown-item" href="contact-us.html">Liên hệ chúng tôi</a></li>
+                                        <li><a class="dropdown-item" href="cart.html">Giỏ hàng</a></li>
+                                        <li><a class="dropdown-item" href="checkout.html">Thanh toán</a></li>                                     
+                                        <li><a class="dropdown-item" href="login.html">Đăng nhập</a></li>
+                                        <li><a class="dropdown-item" href="RegisterAccount.html">Đăng Ký</a></li>
+                                    </ul>
+                                </li>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="javascript:void(0)">TIN TỨC</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="blog-1.html">Chế độ giảm cân</a></li>
+                                    <li><a class="dropdown-item" href="blog-2.html">Siêu mẫu ăn gì</a></li>
+                                    <li><a class="dropdown-item" href="blog-3.html">Thực phẩm giàu protein</a></li>                                    
+                                </ul>
+                            </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="javascript:void(0)">YÊU TỐ</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="elements-products.html">Các sản phẩm</a></li>
+                                        <li><a class="dropdown-item" href="elements-typography.html">Kiểu chữ</a></li>
+                                        <li><a class="dropdown-item" href="elements-buttons.html">nút</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="cr-calling">
+                        <i class="ri-phone-line"></i>
+                        <a href="javascript:void(0)">+84388664859</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Thanh Ngang -->
+    <section class="section-breadcrumb">
+        <div class="cr-breadcrumb-image">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="cr-breadcrumb-title">
+                            <h2>Đăng Nhập</h2>
+                            <span> <a href="index.html">Trang Chủ</a> - Đăng Nhập</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Đăng Nhâp -->
+    <section class="section-login padding-tb-100">
+        <div class="container">
+            <div class="row d-none">
+                <div class="col-lg-12">
+                    <div class="mb-30" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="400">
+                        <div class="cr-banner">
+                            <h2>Đăng Nhập</h2>
+                        </div>
+                        <div class="cr-banner-sub-title">
+                            <p>Hello Every One. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="cr-login" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="400">
+                        <div class="form-logo">
+                            <img src="assets/img/logo/logo.png" alt="logo">
+                        </div>
+                        <form class="cr-content-form">
+                            <div class="form-group">
+                                <label>Địa chỉ email*</label>
+                                <input type="email" placeholder="Nhập Email của bạn" class="cr-form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Mật khẩu*</label>
+                                <input type="password" placeholder="Nhập mật khẩu của bạn" class="cr-form-control">
+                            </div>
+                            <div class="remember">
+                                <span class="form-group custom">
+                                    <input type="checkbox" id="html">
+                                    <label for="html">Nhớ mật khẩu</label>
+                                </span>
+                                <a class="link" href="forgot.html">Quên mật khẩu?</a>
+                            </div><br>
+                            <div class="login-buttons">
+                                <button type="button" class="cr-button">Đăng Nhập</button>
+                                <a href="RegisterAccount.html" class="link">Đăng ký?</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer padding-t-100 bg-off-white">
+        <div class="container">
+            <div class="row footer-top padding-b-100">
+                <div class="col-xl-4 col-lg-6 col-sm-12 col-12 cr-footer-border">
+                    <div class="cr-footer-logo">
+                        <div class="image">
+                            <img src="assets/img/logo/logo.png" alt="logo" class="logo">
+                            <img src="assets/img/logo/dark-logo.png" alt="logo" class="dark-logo">
+                        </div>
+                        <p>CarrotStore là thị trường lớn nhất của các sản phẩm tạp hóa. 
+                            Nhận nhu cầu hàng ngày của bạn là công việc từ cửa hàng của chúng tôi.</p>
+                    </div>
+                    <div class="cr-footer">
+                        <h4 class="cr-sub-title cr-title-hidden">Liên hệ chúng tôi
+                            <span class="cr-heading-res"></span>
+                        </h4>
+                        <ul class="cr-footer-links cr-footer-dropdown">
+                            <li class="location-icon">
+                               Tòa CT4, Thăng Long Capital, An Khánh, Hoài Đức, Hà Nội.
+                               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1107.3216966815498!2d105.72173801518643!3d21.009811752287863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313453ed3b7692f7%3A0x8e2756990ec8745a!2sTh%C4%83ng%20Long%20Capital%20Apartment!5e0!3m2!1svi!2s!4v1715150911815!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </li>
+                            <li class="mail-icon">
+                                <a href="javascript:void(0)">namkhanhnguyen0412@gmail.com</a>
+                            </li>
+                            <li class="phone-icon">
+                                <a href="javascript:void(0)"> 0388664859</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-3 col-sm-12 col-12 cr-footer-border">
+                    <div class="cr-footer">
+                        <h4 class="cr-sub-title">Công Ty
+                            <span class="cr-heading-res"></span>
+                        </h4>
+                        <ul class="cr-footer-links cr-footer-dropdown">
+                            <li><a href="about.html">Về Chúng Tôi</a></li>
+                            <li><a href="track-order.html">Thông Tin Giao Hàng</a></li>
+                            <li><a href="policy.html">Chính Sách Bảo Mật</a></li>
+                            <li><a href="terms.html">Điều Khoản & Điều Kiện</a></li>
+                            <li><a href="contact-us.html">Liên Hệ</a></li>
+                            <li><a href="faq.html">Trung Tâm Hỗ Trợ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-3 col-sm-12 col-12 cr-footer-border">
+                    <div class="cr-footer">
+                        <h4 class="cr-sub-title">Danh Mục
+                            <span class="cr-heading-res"></span>
+                        </h4>
+                        <ul class="cr-footer-links cr-footer-dropdown">
+                            <li><a href="listproduct.html">Sữa & Bánh</a></li>
+                            <li><a href="listproduct.html">Trái cây & Rau quả</a></li>
+                            <li><a href="listproduct.html">Snack & Gia vị</a></li>
+                            <li><a href="listproduct.html">Nước ép & Đồ uống</a></li>
+                            <li><a href="listproduct.html">Thịt & Cá</a></li>
+                            <li><a href="listproduct.html">Đồ ăn nhanh</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-12 col-sm-12 col-12 cr-footer-border">
+                    <div class="cr-footer cr-newsletter">
+                        <h4 class="cr-sub-title">Đăng ký nhận bản tin của chúng tôi
+                            <span class="cr-heading-res"></span>
+                        </h4>
+                        <div class="cr-footer-links cr-footer-dropdown">
+                            <form class="cr-search-footer">
+                                <input class="search-input" type="text" placeholder="Tìm kiếm ở đây...">
+                                <a href="javascript:void(0)" class="search-btn">
+                                    <i class="ri-send-plane-fill"></i>
+                                </a>
+                            </form>
+                        </div>
+                        <div class="cr-social-media">
+                            <span><a href="javascript:void(0)"><i class="ri-facebook-line"></i></a></span>
+                            <span><a href="javascript:void(0)"><i class="ri-twitter-x-line"></i></a></span>
+                            <span><a href="javascript:void(0)"><i class="ri-dribbble-line"></i></a></span>
+                            <span><a href="javascript:void(0)"><i class="ri-instagram-line"></i></a></span>
+                        </div>
+                        <div class="cr-payment">
+                            <div class="cr-insta-slider swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="#" class="cr-payment-image">
+                                            <img src="assets/img/insta/1.jpg" alt="insta">
+                                            <div class="payment-overlay"></div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="cr-payment-image">
+                                            <img src="assets/img/insta/2.jpg" alt="insta">
+                                            <div class="payment-overlay"></div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="cr-payment-image">
+                                            <img src="assets/img/insta/3.jpg" alt="insta">
+                                            <div class="payment-overlay"></div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="cr-payment-image">
+                                            <img src="assets/img/insta/4.jpg" alt="insta">
+                                            <div class="payment-overlay"></div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="cr-payment-image">
+                                            <img src="assets/img/insta/5.jpg" alt="insta">
+                                            <div class="payment-overlay"></div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="cr-payment-image">
+                                            <img src="assets/img/insta/6.jpg" alt="insta">
+                                            <div class="payment-overlay"></div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="cr-payment-image">
+                                            <img src="assets/img/insta/7.jpg" alt="insta">
+                                            <div class="payment-overlay"></div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="cr-payment-image">
+                                            <img src="assets/img/insta/8.jpg" alt="insta">
+                                            <div class="payment-overlay"></div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cr-last-footer">
+                <p>&copy; <span id="copyright_year"></span> <a href="index.html">Carrot</a>, Nam Khánh Food Store.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Tab to top -->
+    <a href="#Top" class="back-to-top result-placeholder">
+        <i class="ri-arrow-up-line"></i>
+        <div class="back-to-top-wrap">
+            <svg viewBox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+            </svg>
+        </div>
+    </a>
+
+    <!-- Giỏ hàng -->
+    <div class="cr-cart-overlay"></div>
+    <div class="cr-cart-view">
+        <div class="cr-cart-inner">
+            <div class="cr-cart-top">
+                <div class="cr-cart-title">
+                    <h6>Giỏ hàng của tôi</h6>
+                    <button type="button" class="close-cart">×</button>
+                </div>
+                <ul class="crcart-pro-items">
+                    <li>
+                        <a href="detailproduct.html" class="crside_pro_img"><img src="assets/img/product/4.jpg"
+                                alt="product-1"></a>
+                        <div class="cr-pro-content">
+                            <a href="detailproduct.html" class="cart_pro_title">Lựu Tươi</a>
+                            <span class="cart-price"><span>$56.00</span> x 1kg</span>
+                            <div class="cr-cart-qty">
+                                <div class="cart-qty-plus-minus">
+                                    <button type="button" class="plus">+</button>
+                                    <input type="text" placeholder="." value="1" minlength="1" maxlength="20"
+                                        class="quantity">
+                                    <button type="button" class="minus">-</button>
+                                </div>
+                            </div>
+                            <a href="javascript:void(0)" class="remove">×</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="detailproduct.html" class="crside_pro_img"><img src="assets/img/product/2.jpg"
+                                alt="product-2"></a>
+                        <div class="cr-pro-content">
+                            <a href="detailproduct.html" class="cart_pro_title">Táo Xanh</a>
+                            <span class="cart-price"><span>$75.00</span> x 1kg</span>
+                            <div class="cr-cart-qty">
+                                <div class="cart-qty-plus-minus">
+                                    <button type="button" class="plus">+</button>
+                                    <input type="text" placeholder="." value="1" minlength="1" maxlength="20"
+                                        class="quantity">
+                                    <button type="button" class="minus">-</button>
+                                </div>
+                            </div>
+                            <a href="javascript:void(0)" class="remove">×</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="detailproduct.html" class="crside_pro_img"><img src="assets/img/product/3.jpg"
+                                alt="product-3"></a>
+                        <div class="cr-pro-content">
+                            <a href="detailproduct.html" class="cart_pro_title">Dưa Hấu - Nhỏ</a>
+                            <span class="cart-price"><span>$48.00</span> x 5kg</span>
+                            <div class="cr-cart-qty">
+                                <div class="cart-qty-plus-minus">
+                                    <button type="button" class="plus">+</button>
+                                    <input type="text" placeholder="." value="1" minlength="1" maxlength="20"
+                                        class="quantity">
+                                    <button type="button" class="minus">-</button>
+                                </div>
+                            </div>
+                            <a href="javascript:void(0)" class="remove">×</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="cr-cart-bottom">
+                <div class="cart-sub-total">
+                    <table class="table cart-table">
+                        <tbody>
+                            <tr>
+                                <td class="text-left">Tổng phụ:</td>
+                                <td class="text-right">$300.00</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">VAT (20%):</td>
+                                <td class="text-right">$60.00</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Tổng cộng:</td>
+                                <td class="text-right primary-color">$360.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="cart_btn">
+                    <a href="cart.html" class="cr-button">Giỏ Hàng</a>
+                    <a href="checkout.html" class="cr-btn-secondary">Thanh Toán</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vendor Custom -->
+    <script src="assets/js/vendor/jquery-3.6.4.min.js"></script>
+    <script src="assets/js/vendor/jquery.zoom.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/vendor/mixitup.min.js"></script>
+    <script src="assets/js/vendor/range-slider.js"></script>
+    <script src="assets/js/vendor/aos.min.js"></script>
+    <script src="assets/js/vendor/swiper-bundle.min.js"></script>
+    <script src="assets/js/vendor/slick.min.js"></script>
+
+    <!-- Main Custom -->
+    <script src="assets/js/main.js"></script>
+    
+</body>
+</html>

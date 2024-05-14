@@ -1,0 +1,1792 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="ecommerce, market, shop, mart, cart, deal, multipurpose, marketplace">
+    <meta name="description" content="CarrotStore.">
+    <meta name="author" content="ashishmaraviya">
+
+    <title>Khánh-FoodStore</title>
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/img/logo/favicon.png">
+
+    <!-- Icon CSS -->
+    <link rel="stylesheet" href="assets/css/vendor/materialdesignicons.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/remixicon.css">
+
+    <!-- Vendor -->
+    <link rel="stylesheet" href="assets/css/vendor/animate.css">
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/aos.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/range-slider.css">
+    <link rel="stylesheet" href="assets/css/vendor/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/jquery.slick.css">
+    <link rel="stylesheet" href="assets/css/vendor/slick-theme.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="body-bg-6">
+
+    <!-- Loader -->
+    <div id="cr-overlay">
+        <span class="loader"></span>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="top-header">
+                        <a href="index.html" class="cr-logo">
+                            <img src="assets/img/logo/logo.png" alt="logo" class="logo">
+                            <img src="assets/img/logo/dark-logo.png" alt="logo" class="dark-logo">
+                        </a>
+                        <form class="cr-search">
+                            <input class="search-input" type="text" placeholder="Tìm kiếm sản phẩm...">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>DANH MỤC</option>
+                                <option value="1">Thực phẩm nam giới</option>
+                                <option value="2">Thực phẩm nữ giới</option>
+                                <option value="3">Thực phẩm trung giới</option>
+                            </select>
+                            <a href="javascript:void(0)" class="search-btn">
+                                <i class="ri-search-line"></i>
+                            </a>
+                        </form>
+                        <div class="cr-right-bar">
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle cr-right-bar-item" href="javascript:void(0)">
+                                        <i class="ri-user-3-line"></i>
+                                        <span>Tài Khoản</span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="RegisterAccount.html">Đăng ký</a></li>
+                                        <li><a class="dropdown-item" href="checkout.html">Thanh toán</a></li>
+                                        <li><a class="dropdown-item" href="login.html">Đăng nhập</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <a href="wishlist.html" class="cr-right-bar-item">
+                                <i class="ri-heart-3-line"></i>
+                                <span>Danh sách yêu thích</span>
+                            </a>
+                            <a href="javascript:void(0)" class="cr-right-bar-item Shopping-toggle">
+                                <i class="ri-shopping-cart-line"></i>
+                                <span>Giỏ Hàng</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cr-fix" id="cr-main-menu-desk">
+            <div class="container">
+                <div class="cr-menu-list">
+                    <div class="cr-category-icon-block">
+                        <div class="cr-category-menu">
+                            <div class="cr-category-toggle">
+                                <i class="ri-menu-2-line"></i>
+                            </div>
+                        </div>
+                        <div class="cr-cat-dropdown">
+                            <div class="cr-cat-block">
+                                <div class="cr-cat-tab">
+                                    <div class="cr-tab-list nav flex-column nav-pills" id="v-pills-tab" role="tablist"
+                                        aria-orientation="vertical">
+                                        <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
+                                            data-bs-target="#v-pills-home" type="button" role="tab"
+                                            aria-controls="v-pills-home" aria-selected="true">
+                                            Bơ Sữa &amp; Bánh Mì</button>
+                                        <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
+                                            data-bs-target="#v-pills-profile" type="button" role="tab"
+                                            aria-controls="v-pills-profile" aria-selected="false" tabindex="-1">
+                                            Trái Cây &amp; Rau Quả</button>
+                                        <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                                            data-bs-target="#v-pills-messages" type="button" role="tab"
+                                            aria-controls="v-pills-messages" aria-selected="false" tabindex="-1">
+                                            Snack &amp; Gia Vị</button>
+                                        <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill"
+                                            data-bs-target="#v-pills-settings" type="button" role="tab"
+                                            aria-controls="v-pills-settings" aria-selected="false" tabindex="-1">
+                                            Nước ép &amp; Đồ Uống </button>
+                                        <a class="nav-link" href="listproduct.html">
+                                            Xem tất cả </a>
+                                    </div>
+                                    <div class="tab-content" id="v-pills-tabContent">
+                                        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                                            aria-labelledby="v-pills-home-tab">
+                                            <div class="tab-list row">
+                                                <div class="col">
+                                                    <h6 class="cr-col-title">BƠ</h6>
+                                                    <ul class="cat-list">
+                                                        <li><a href="listproduct.html">Sữa</a></li>
+                                                        <li><a href="listproduct.html">Kem</a></li>
+                                                        <li><a href="listproduct.html">Phô Mai</a></li>
+                                                        <li><a href="listproduct.html">Kem Trứng</a></li>
+                                                        <li><a href="listproduct.html">Sữa Chua</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col">
+                                                    <h6 class="cr-col-title">BÁNH</h6>
+                                                    <ul class="cat-list">
+                                                        <li><a href="listproduct.html">Bánh Quy và Bánh Ngọt</a></li>
+                                                        <li><a href="listproduct.html">Bánh Mì Nướng </a></li>
+                                                        <li><a href="listproduct.html">Bánh Bao &amp; Bánh Xèo</a></li>
+                                                        <li><a href="listproduct.html">Bánh Hạnh Nhân Socola</a></li>
+                                                        <li><a href="listproduct.html">Bánh Quy Cuộn Kem</a></li>
+                                                    </ul>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                                            aria-labelledby="v-pills-profile-tab">
+                                            <div class="tab-list row">
+                                                <div class="col">
+                                                    <h6 class="cr-col-title">Trái Cây</h6>
+                                                    <ul class="cat-list">
+                                                        <li><a href="listproduct.html">Táo</a></li>
+                                                        <li><a href="listproduct.html">Dưa hấu</a></li>
+                                                        <li><a href="listproduct.html">Nho</a></li>
+                                                        <li><a href="listproduct.html">Mãng cầu</a></li>
+                                                        <li><a href="listproduct.html">Măng cụt</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col">
+                                                    <h6 class="cr-col-title">Rau Quả</h6>
+                                                    <ul class="cat-list">
+                                                        <li><a href="listproduct.html">Súp lơ</a></li>
+                                                        <li><a href="listproduct.html">Ớt chuông</a></li>
+                                                        <li><a href="listproduct.html">Bông cải xanh</a></li>
+                                                        <li><a href="listproduct.html">Bắp cải</a></li>
+                                                        <li><a href="listproduct.html">Cà chua</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                                            aria-labelledby="v-pills-messages-tab">
+                                            <div class="tab-list row">
+                                                <div class="col">
+                                                    <h6 class="cr-col-title">SNACKS</h6>
+                                                    <ul class="cat-list">
+                                                        <li><a href="listproduct.html">Khoai tây chiên</a></li>
+                                                        <li><a href="listproduct.html">Lạp xưởng nướng đá</a></li>
+                                                        <li><a href="listproduct.html">Bánh tráng nướng</a></li>
+                                                        <li><a href="listproduct.html">Bắp rang bơ</a></li>
+                                                        <li><a href="listproduct.html">Gà KFC</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col">
+                                                    <h6 class="cr-col-title">GIA VỊ</h6>
+                                                    <ul class="cat-list">
+                                                        <li><a href="listproduct.html">Bột quế</a></li>
+                                                        <li><a href="listproduct.html">Muối</a></li>
+                                                        <li><a href="listproduct.html">Mì chính</a></li>
+                                                        <li><a href="listproduct.html">Hạt tiêu</a></li>
+                                                        <li><a href="listproduct.html">Đường</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
+                                            aria-labelledby="v-pills-settings-tab">
+                                            <div class="tab-list row">
+                                                <div class="col">
+                                                    <h6 class="cr-col-title">NƯỚC ÉP</h6>
+                                                    <ul class="cat-list">
+                                                        <li><a href="listproduct.html">Nước ép xoài</a></li>
+                                                        <li><a href="listproduct.html">Nước ép chuối</a></li>
+                                                        <li><a href="listproduct.html">Nước ép cam</a></li>
+                                                        <li><a href="listproduct.html">Nước ép táo</a></li>
+                                                        <li><a href="listproduct.html">Nước ép ổi</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col">
+                                                    <h6 class="cr-col-title">ĐỒ UỐNG</h6>
+                                                    <ul class="cat-list">
+                                                        <li><a href="listproduct.html">Coca Cola</a></li>
+                                                        <li><a href="listproduct.html">Bò húc</a></li>
+                                                        <li><a href="listproduct.html">Fanta</a></li>
+                                                        <li><a href="listproduct.html">7up</a></li>
+                                                        <li><a href="listproduct.html">Mirinda</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="navbar navbar-expand-lg">
+                        <a href="javascript:void(0)" class="navbar-toggler shadow-none">
+                            <i class="ri-menu-3-line"></i>
+                        </a>
+                        <div class="cr-header-buttons">
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link" href="javascript:void(0)">
+                                        <i class="ri-user-3-line"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="RegisterAccount.html">Đăng Ký</a></li>
+                                        <li><a class="dropdown-item" href="checkout.html">Thanh Toán</a></li>
+                                        <li><a class="dropdown-item" href="login.html">Đăng Nhập</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <a href="wishlist.html" class="cr-right-bar-item">
+                                <i class="ri-heart-line"></i>
+                            </a>
+                            <a href="javascript:void(0)" class="cr-right-bar-item Shopping-toggle">
+                                <i class="ri-shopping-cart-line"></i>
+                            </a>
+                        </div>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html">TRANG CHỦ</a>
+                                </li>                           
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="javascript:void(0)">SẢN PHẨM</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="listproduct.html">Mua sắm</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="javascript:void(0)">TRANG</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="about.html">Về chúng tôi</a></li>
+                                        <li><a class="dropdown-item" href="contact-us.html">Liên hệ chúng tôi</a></li>
+                                        <li><a class="dropdown-item" href="cart.html">Giỏ hàng</a></li>
+                                        <li><a class="dropdown-item" href="checkout.html">Thanh toán</a></li>                                     
+                                        <li><a class="dropdown-item" href="login.html">Đăng nhập</a></li>
+                                        <li><a class="dropdown-item" href="RegisterAccount.html">Đăng Ký</a></li>
+                                    </ul>
+                                </li>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="javascript:void(0)">TIN TỨC</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="blog-1.html">Chế độ giảm cân</a></li>
+                                    <li><a class="dropdown-item" href="blog-2.html">Siêu mẫu ăn gì</a></li>
+                                    <li><a class="dropdown-item" href="blog-3.html">Thực phẩm giàu protein</a></li>                                    
+                                </ul>
+                            </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="javascript:void(0)">YÊU TỐ</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="elements-products.html">Các sản phẩm</a></li>
+                                        <li><a class="dropdown-item" href="elements-typography.html">Kiểu chữ</a></li>
+                                        <li><a class="dropdown-item" href="elements-buttons.html">nút</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="cr-calling">
+                        <i class="ri-phone-line"></i>
+                        <a href="javascript:void(0)">+84388664859</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner slider -->
+    <section class="section-hero padding-b-100 next">
+        <div class="cr-slider swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="cr-hero-banner cr-banner-image-two">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="cr-left-side-contain slider-animation">
+                                        <h5><span>100%</span> Trái Cây Hữu Cơ</h5>
+                                        <h1>Trái cây tươi và ngon ngọt</h1>
+                                        <p>Chúng không chỉ ngon miệng mà còn giàu chất dinh dưỡng, vitamin, khoáng chất và chất chống oxy hóa.</p>
+                                        <div class="cr-last-buttons">
+                                            <a href="listproduct.html" class="cr-button"> MUA NGAY</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="cr-hero-banner cr-banner-image-one">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="cr-left-side-contain slider-animation">
+                                        <h5><span>100%</span> Rau Hữu Cơ</h5>
+                                        <h1>Lựa chọn tốt cho những người quan tâm đến sức khỏe cá nhân.</h1>
+                                        <p>Được trồng theo phương pháp hữu cơ, tức là không sử dụng hóa chất nhân tạo.</p>
+                                        <div class="cr-last-buttons">
+                                            <a href="listproduct.html" class="cr-button">MUA NGAY</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- Thể Loại -->
+    <section class="section-categories padding-b-100">
+        <div class="container">
+            <div class="row mb-minus-24">
+                <div class="col-lg-4 col-12 mb-24">
+                    <div class="cr-categories">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active center-categories-inner" id="cake_milk-tab"
+                                    data-bs-toggle="tab" data-bs-target="#cake_milk" type="button" role="tab"
+                                    aria-controls="cake_milk" aria-selected="true">
+                                    Bánh & Sữa <span>(65 sản phẩm)</span>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link center-categories-inner" id="meat-tab" data-bs-toggle="tab"
+                                    data-bs-target="#meat" type="button" role="tab" aria-controls="meat"
+                                    aria-selected="false" tabindex="-1">
+                                    Thịt Tươi <span>(30 sản phẩm)</span>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link center-categories-inner" id="Vegetables-tab"
+                                    data-bs-toggle="tab" data-bs-target="#Vegetables" type="button" role="tab"
+                                    aria-controls="Vegetables" aria-selected="false" tabindex="-1">
+                                    Rau Sạch <span>(25 sản phẩm)</span>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link center-categories-inner" id="Custard-tab" data-bs-toggle="tab"
+                                    data-bs-target="#Custard" type="button" role="tab" aria-controls="Custard"
+                                    aria-selected="false" tabindex="-1">
+                                    Hoa Quả & Nước Ép <span>(45 sản phẩm)</span>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link center-categories-inner" id="Strawberry-tab"
+                                    data-bs-toggle="tab" data-bs-target="#Strawberry" type="button" role="tab"
+                                    aria-controls="Strawberry" aria-selected="false" tabindex="-1">
+                                    Dâu Tây <span>(18 sản phẩm)</span>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="center-categories-inner cr-view-more" href="listproduct.html">Xem Thêm</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-12 mb-24">
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade active show" id="cake_milk" role="tabpanel"
+                            aria-labelledby="cake_milk-tab">
+                            <div class="row mb-minus-24">
+                                <div class="col-6 cr-categories-box mb-24">
+                                    <div class="cr-side-categories">
+                                        <div class="categories-inner">
+                                            <h4>50
+                                                <span>
+                                                    <small>%</small>
+                                                    <small>Off</small>
+                                                </span>
+                                            </h4>
+                                        </div>
+                                        <div class="categories-contain">
+                                            <div class="categories-text">
+                                                <h5>BÁNH</h5>
+                                            </div>
+                                            <div class="categories-button">
+                                                <a href="listproduct.html" class="cr-button">MUA NGAY</a>
+                                            </div>
+                                        </div>
+                                        <img src="assets/img/categories/3.jpg" alt="categories-3">
+                                    </div>
+                                </div>
+                                <div class="col-6 cr-categories-box mb-24">
+                                    <div class="cr-side-categories">
+                                        <div class="categories-inner">
+                                            <h4>40
+                                                <span>
+                                                    <small>%</small>
+                                                    <small>Off</small>
+                                                </span>
+                                            </h4>
+                                        </div>
+                                        <div class="categories-contain">
+                                            <div class="categories-text">
+                                                <h5>SỮA</h5>
+                                            </div>
+                                            <div class="categories-button">
+                                                <a href="listproduct.html" class="cr-button">MUA NGAY</a>
+                                            </div>
+                                        </div>
+                                        <img src="assets/img/categories/4.jpg" alt="categories-4">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="meat" role="tabpanel" aria-labelledby="meat-tab">
+                            <div class="row mb-minus-24">
+                                <div class="col-6 cr-categories-box">
+                                    <div class="cr-side-categories">
+                                        <div class="categories-inner">
+                                            <h4>35
+                                                <span>
+                                                    <small>%</small>
+                                                    <small>Off</small>
+                                                </span>
+                                            </h4>
+                                        </div>
+                                        <div class="categories-contain">
+                                            <div class="categories-text">
+                                                <h5>THỊT CÁ </h5>
+                                            </div>
+                                            <div class="categories-button">
+                                                <a href="listproduct.html" class="cr-button">MUA NGAY</a>
+                                            </div>
+                                        </div>
+                                        <img src="assets/img/categories/1.jpg" alt="categories-1">
+                                    </div>
+                                </div>
+                                <div class="col-6 cr-categories-box">
+                                    <div class="cr-side-categories">
+                                        <div class="categories-inner">
+                                            <h4>24
+                                                <span>
+                                                    <small>%</small>
+                                                    <small>Off</small>
+                                                </span>
+                                            </h4>
+                                        </div>
+                                        <div class="categories-contain">
+                                            <div class="categories-text">
+                                                <h5>THỊT BÒ</h5>
+                                            </div>
+                                            <div class="categories-button">
+                                                <a href="listproduct.html" class="cr-button">MUA NGAY</a>
+                                            </div>
+                                        </div>
+                                        <img src="assets/img/categories/2.jpg" alt="categories-2">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="Vegetables" role="tabpanel" aria-labelledby="Vegetables-tab">
+                            <div class="row mb-minus-24">
+                                <div class="col-6 cr-categories-box mb-24">
+                                    <div class="cr-side-categories">
+                                        <div class="categories-inner">
+                                            <h4>45
+                                                <span>
+                                                    <small>%</small>
+                                                    <small>Off</small>
+                                                </span>
+                                            </h4>
+                                        </div>
+                                        <div class="categories-contain">
+                                            <div class="categories-text">
+                                                <h5>RAU MÙI</h5>
+                                            </div>
+                                            <div class="categories-button">
+                                                <a href="listproduct.html" class="cr-button">MUA NGAY</a>
+                                            </div>
+                                        </div>
+                                        <img src="assets/img/categories/5.jpg" alt="categories-5">
+                                    </div>
+                                </div>
+                                <div class="col-6 cr-categories-box mb-24">
+                                    <div class="cr-side-categories">
+                                        <div class="categories-inner">
+                                            <h4>20
+                                                <span>
+                                                    <small>%</small>
+                                                    <small>Off</small>
+                                                </span>
+                                            </h4>
+                                        </div>
+                                        <div class="categories-contain">
+                                            <div class="categories-text">
+                                                <h5>BÔNG CẢI</h5>
+                                            </div>
+                                            <div class="categories-button">
+                                                <a href="listproduct.html" class="cr-button">MUA NGAY</a>
+                                            </div>
+                                        </div>
+                                        <img src="assets/img/categories/6.jpg" alt="categories-6">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="Custard" role="tabpanel" aria-labelledby="Custard-tab">
+                            <div class="row mb-minus-24">
+                                <div class="col-6 cr-categories-box mb-24">
+                                    <div class="cr-side-categories">
+                                        <div class="categories-inner">
+                                            <h4>30
+                                                <span>
+                                                    <small>%</small>
+                                                    <small>Off</small>
+                                                </span>
+                                            </h4>
+                                        </div>
+                                        <div class="categories-contain">
+                                            <div class="categories-text">
+                                                <h5>TÁO</h5>
+                                            </div>
+                                            <div class="categories-button">
+                                                <a href="listproduct.html" class="cr-button">MUA NGAY</a>
+                                            </div>
+                                        </div>
+                                        <img src="assets/img/categories/7.jpg" alt="categories-7">
+                                    </div>
+                                </div>
+                                <div class="col-6 cr-categories-box mb-24">
+                                    <div class="cr-side-categories">
+                                        <div class="categories-inner">
+                                            <h4>25
+                                                <span>
+                                                    <small>%</small>
+                                                    <small>Off</small>
+                                                </span>
+                                            </h4>
+                                        </div>
+                                        <div class="categories-contain">
+                                            <div class="categories-text">
+                                                <h5>XOÀI</h5>
+                                            </div>
+                                            <div class="categories-button">
+                                                <a href="listproduct.html" class="cr-button">MUA NGAY</a>
+                                            </div>
+                                        </div>
+                                        <img src="assets/img/categories/8.jpg" alt="categories-8">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="Strawberry" role="tabpanel" aria-labelledby="Strawberry-tab">
+                            <div class="row mb-minus-24">
+                                <div class="col-6 cr-categories-box mb-24">
+                                    <div class="cr-side-categories">
+                                        <div class="categories-inner">
+                                            <h4>33
+                                                <span>
+                                                    <small>%</small>
+                                                    <small>Off</small>
+                                                </span>
+                                            </h4>
+                                        </div>
+                                        <div class="categories-contain">
+                                            <div class="categories-text">
+                                                <h5>DÂU TÂY MỘC CHÂU</h5>
+                                            </div>
+                                            <div class="categories-button">
+                                                <a href="listproduct.html" class="cr-button">MUA NGAY</a>
+                                            </div>
+                                        </div>
+                                        <img src="assets/img/categories/9.jpg" alt="categories-9">
+                                    </div>
+                                </div>
+                                <div class="col-6 cr-categories-box mb-24">
+                                    <div class="cr-side-categories">
+                                        <div class="categories-inner">
+                                            <h4>15
+                                                <span>
+                                                    <small>%</small>
+                                                    <small>Off</small>
+                                                </span>
+                                            </h4>
+                                        </div>
+                                        <div class="categories-contain">
+                                            <div class="categories-text">
+                                                <h5>DÂU TÂY ĐÀ LẠT</h5>
+                                            </div>
+                                            <div class="categories-button">
+                                                <a href="listproduct.html" class="cr-button">MUA NGAY</a>
+                                            </div>
+                                        </div>
+                                        <img src="assets/img/categories/10.jpg" alt="categories-10">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular product -->
+    <section class="section-popular-product-shape padding-b-100">
+        <div class="container" data-aos="fade-up" data-aos-duration="2000">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="mb-30">
+                        <div class="cr-banner">
+                            <h2>THỰC PHẨM NỔI BẬT</h2>
+                        </div>
+                        <div class="cr-banner-sub-title">
+                            <p>Việc lựa chọn thực phẩm hữu cơ có thể giúp bạn tiêu thụ những 
+                                sản phẩm tốt hơn cho sức khỏe và đóng góp vào sự bền vững của hành tinh. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-content row mb-minus-24" id="MixItUpDA2FB7">
+                <div class="col-xl-3 col-lg-4 col-12 mb-24">
+                    <div class="row mb-minus-24 sticky">
+                        <div class="col-lg-12 col-sm-6 col-6 cr-product-box mb-24">
+                            <div class="cr-product-tabs">
+                                <ul>
+                                    <li class="active" data-filter="all">All</li>
+                                    <li data-filter=".snack">Snack</li>
+                                    <li data-filter=".vegetable">Rau Củ</li>
+                                    <li data-filter=".fruit">Trái Cây</li>
+                                    <li data-filter=".bakery">Bánh</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-sm-6 col-6 cr-product-box banner-480 mb-24">
+                            <div class="cr-ice-cubes">
+                                <img src="assets/img/product/product-banner.jpg" alt="product banner">
+                                <div class="cr-ice-cubes-contain">
+                                    <h4 class="title">NƯỚC ÉP </h4>
+                                    <h5 class="sub-title">Trái Cây</h5>
+                                    <span>100% Tự nhiên</span>
+                                    <a href="listproduct.html" class="cr-button">MUA NGAY</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-9 col-lg-8 col-12 mb-24">
+                    <div class="row mb-minus-24">
+                        <div class="mix vegetable col-xxl-3 col-xl-4 col-6 cr-product-box mb-24">
+                            <div class="cr-product-card">
+                                <div class="cr-product-image">
+                                    <div class="cr-image-inner zoom-image-hover">
+                                        <img src="assets/img/product/1.jpg" alt="product-1">
+                                    </div>
+                                    <div class="cr-side-view">
+                                        <a href="javascript:void(0)" class="wishlist">
+                                            <i class="ri-heart-line"></i>
+                                        </a>
+                                        <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
+                                            role="button">
+                                            <i class="ri-eye-line"></i>
+                                        </a>
+                                    </div>
+                                    <a class="cr-shopping-bag" href="javascript:void(0)">
+                                        <i class="ri-shopping-bag-line"></i>
+                                    </a>
+                                </div>
+                                <div class="cr-product-details">
+                                    <div class="cr-brand">
+                                        <a href="listproduct.html">Rau Củ</a>
+                                        <div class="cr-star">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-line"></i>
+                                            <p>(4.5)</p>
+                                        </div>
+                                    </div>
+                                    <a href="detailproduct.html" class="title">Chanh vàng hữu cơ</a>
+                                    <p class="cr-price"><span class="new-price">$120</span> <span
+                                            class="old-price">$133</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mix snack col-xxl-3 col-xl-4 col-6 cr-product-box mb-24">
+                            <div class="cr-product-card">
+                                <div class="cr-product-image">
+                                    <div class="cr-image-inner zoom-image-hover">
+                                        <img src="assets/img/product/9.jpg" alt="product-1">
+                                    </div>
+                                    <div class="cr-side-view">
+                                        <a href="javascript:void(0)" class="wishlist">
+                                            <i class="ri-heart-line"></i>
+                                        </a>
+                                        <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
+                                            role="button">
+                                            <i class="ri-eye-line"></i>
+                                        </a>
+                                    </div>
+                                    <a class="cr-shopping-bag" href="javascript:void(0)">
+                                        <i class="ri-shopping-bag-line"></i>
+                                    </a>
+                                </div>
+                                <div class="cr-product-details">
+                                    <div class="cr-brand">
+                                        <a href="listproduct.html">Snacks</a>
+                                        <div class="cr-star">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <p>(5.0)</p>
+                                        </div>
+                                    </div>
+                                    <a href="detailproduct.html" class="title">Snack Nhân Socola Vị Hazelnut Gói 85g</a>
+                                    <p class="cr-price"><span class="new-price">$145</span> <span
+                                            class="old-price">$150</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mix fruit col-xxl-3 col-xl-4 col-6 cr-product-box mb-24">
+                            <div class="cr-product-card">
+                                <div class="cr-product-image">
+                                    <div class="cr-image-inner zoom-image-hover">
+                                        <img src="assets/img/product/2.jpg" alt="product-1">
+                                    </div>
+                                    <div class="cr-side-view">
+                                        <a href="javascript:void(0)" class="wishlist">
+                                            <i class="ri-heart-line"></i>
+                                        </a>
+                                        <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
+                                            role="button">
+                                            <i class="ri-eye-line"></i>
+                                        </a>
+                                    </div>
+                                    <a class="cr-shopping-bag" href="javascript:void(0)">
+                                        <i class="ri-shopping-bag-line"></i>
+                                    </a>
+                                </div>
+                                <div class="cr-product-details">
+                                    <div class="cr-brand">
+                                        <a href="listproduct.html">Trái Cây</a>
+                                        <div class="cr-star">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-line"></i>
+                                            <p>(4.5)</p>
+                                        </div>
+                                    </div>
+                                    <a href="detailproduct.html" class="title">Nước ép táo tươi hữu cơ</a>
+                                    <p class="cr-price"><span class="new-price">$120.25</span> <span
+                                            class="old-price">$123.25</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mix bakery col-xxl-3 col-xl-4 col-6 cr-product-box mb-24">
+                            <div class="cr-product-card">
+                                <div class="cr-product-image">
+                                    <div class="cr-image-inner zoom-image-hover">
+                                        <img src="assets/img/product/17.jpg" alt="product-1">
+                                    </div>
+                                    <div class="cr-side-view">
+                                        <a href="javascript:void(0)" class="wishlist">
+                                            <i class="ri-heart-line"></i>
+                                        </a>
+                                        <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
+                                            role="button">
+                                            <i class="ri-eye-line"></i>
+                                        </a>
+                                    </div>
+                                    <a class="cr-shopping-bag" href="javascript:void(0)">
+                                        <i class="ri-shopping-bag-line"></i>
+                                    </a>
+                                </div>
+                                <div class="cr-product-details">
+                                    <div class="cr-brand">
+                                        <a href="listproduct.html">Bánh</a>
+                                        <div class="cr-star">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <p>(5.0)</p>
+                                        </div>
+                                    </div>
+                                    <a href="detailproduct.html" class="title">Bánh mì tươi nướng ngon</a>
+                                    <p class="cr-price"><span class="new-price">$20</span> <span
+                                            class="old-price">$22.10</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mix snack col-xxl-3 col-xl-4 col-6 cr-product-box mb-24">
+                            <div class="cr-product-card">
+                                <div class="cr-product-image">
+                                    <div class="cr-image-inner zoom-image-hover">
+                                        <img src="assets/img/product/11.jpg" alt="product-1">
+                                    </div>
+                                    <div class="cr-side-view">
+                                        <a href="javascript:void(0)" class="wishlist">
+                                            <i class="ri-heart-line"></i>
+                                        </a>
+                                        <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
+                                            role="button">
+                                            <i class="ri-eye-line"></i>
+                                        </a>
+                                    </div>
+                                    <a class="cr-shopping-bag" href="javascript:void(0)">
+                                        <i class="ri-shopping-bag-line"></i>
+                                    </a>
+                                </div>
+                                <div class="cr-product-details">
+                                    <div class="cr-brand">
+                                        <a href="listproduct.html">Snacks</a>
+                                        <div class="cr-star">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <p>(5.0)</p>
+                                        </div>
+                                    </div>
+                                    <a href="detailproduct.html" class="title">Hạt dinh dưỡng ngũ cốc Trial Mix gói 24g</a>
+                                    <p class="cr-price"><span class="new-price">$120.25</span> <span
+                                            class="old-price">$123.25</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mix fruit col-xxl-3 col-xl-4 col-6 cr-product-box mb-24">
+                            <div class="cr-product-card">
+                                <div class="cr-product-image">
+                                    <div class="cr-image-inner zoom-image-hover">
+                                        <img src="assets/img/product/3.jpg" alt="product-1">
+                                    </div>
+                                    <div class="cr-side-view">
+                                        <a href="javascript:void(0)" class="wishlist">
+                                            <i class="ri-heart-line"></i>
+                                        </a>
+                                        <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
+                                            role="button">
+                                            <i class="ri-eye-line"></i>
+                                        </a>
+                                    </div>
+                                    <a class="cr-shopping-bag" href="javascript:void(0)">
+                                        <i class="ri-shopping-bag-line"></i>
+                                    </a>
+                                </div>
+                                <div class="cr-product-details">
+                                    <div class="cr-brand">
+                                        <a href="listproduct.html">Trái Cây</a>
+                                        <div class="cr-star">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-line"></i>
+                                            <i class="ri-star-line"></i>
+                                            <p>(3.2)</p>
+                                        </div>
+                                    </div>
+                                    <a href="detailproduct.html" class="title">Dưa hấu Mai An Tiêm 5kg</a>
+                                    <p class="cr-price"><span class="new-price">$50.30</span> <span
+                                            class="old-price">$72.60</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mix snack col-xxl-3 col-xl-4 col-6 cr-product-box mb-24">
+                            <div class="cr-product-card">
+                                <div class="cr-product-image">
+                                    <div class="cr-image-inner zoom-image-hover">
+                                        <img src="assets/img/product/10.jpg" alt="product-1">
+                                    </div>
+                                    <div class="cr-side-view">
+                                        <a href="javascript:void(0)" class="wishlist">
+                                            <i class="ri-heart-line"></i>
+                                        </a>
+                                        <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
+                                            role="button">
+                                            <i class="ri-eye-line"></i>
+                                        </a>
+                                    </div>
+                                    <a class="cr-shopping-bag" href="javascript:void(0)">
+                                        <i class="ri-shopping-bag-line"></i>
+                                    </a>
+                                </div>
+                                <div class="cr-product-details">
+                                    <div class="cr-brand">
+                                        <a href="listproduct.html">Snacks</a>
+                                        <div class="cr-star">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <p>(5.0)</p>
+                                        </div>
+                                    </div>
+                                    <a href="detailproduct.html" class="title">Hạt năng lượng vị muối hồng dinh dưỡng</a>
+                                    <p class="cr-price"><span class="new-price">$120.25</span> <span
+                                            class="old-price">$123.25</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mix bakery col-xxl-3 col-xl-4 col-6 cr-product-box mb-24">
+                            <div class="cr-product-card">
+                                <div class="cr-product-image">
+                                    <div class="cr-image-inner zoom-image-hover">
+                                        <img src="assets/img/product/17.jpg" alt="product-1">
+                                    </div>
+                                    <div class="cr-side-view">
+                                        <a href="javascript:void(0)" class="wishlist">
+                                            <i class="ri-heart-line"></i>
+                                        </a>
+                                        <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
+                                            role="button">
+                                            <i class="ri-eye-line"></i>
+                                        </a>
+                                    </div>
+                                    <a class="cr-shopping-bag" href="javascript:void(0)">
+                                        <i class="ri-shopping-bag-line"></i>
+                                    </a>
+                                </div>
+                                <div class="cr-product-details">
+                                    <div class="cr-brand">
+                                        <a href="listproduct.html">Bánh</a>
+                                        <div class="cr-star">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <p>(5.0)</p>
+                                        </div>
+                                    </div>
+                                    <a href="detailproduct.html" class="title">Bánh mì áp lò nóng giòn</a>
+                                    <p class="cr-price"><span class="new-price">$20</span> <span
+                                            class="old-price">$22.10</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product banner -->
+    <section class="section-product-banner padding-b-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="cr-banner-slider swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" data-aos="fade-up" data-aos-duration="2000">
+                                <div class="cr-product-banner-image">
+                                    <img src="assets/img/product-banner/1.jpg" alt="product-banner">
+                                    <div class="cr-product-banner-contain">
+                                        <h5>Sức Khỏe <br> Thực phẩm bánh</h5>
+                                        <p><span class="percent">30%</span>Off <span class="text">đơn hàng đầu tiên</span>
+                                        </p>
+                                        <div class="cr-product-banner-buttons">
+                                            <a href="listproduct.html" class="cr-button">MUA NGAY</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" data-aos="fade-up" data-aos-duration="2000">
+                                <div class="cr-product-banner-image">
+                                    <img src="assets/img/product-banner/2.jpg" alt="product-banner">
+                                    <div class="cr-product-banner-contain">
+                                        <h5>Siêu Tươi <br>Đồ ăn nhẹ & Đồ ngọt</h5>
+                                        <p><span class="percent">20%</span>Off <span class="text">đơn hàng đầu tiên</span>
+                                        </p>
+                                        <div class="cr-product-banner-buttons">
+                                            <a href="listproduct.html" class="cr-button">MUA NGAY</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" data-aos="fade-up" data-aos-duration="2000">
+                                <div class="cr-product-banner-image">
+                                    <img src="assets/img/product-banner/3.jpg" alt="product-banner">
+                                    <div class="cr-product-banner-contain">
+                                        <h5>Tươi & Sức Khỏe <br> Trái cây hữu cơ</h5>
+                                        <p><span class="percent">35%</span>Off <span class="text">đơn hàng đầu tiên</span>
+                                        </p>
+                                        <div class="cr-product-banner-buttons">
+                                            <a href="listproduct.html" class="cr-button">MUA NGAY</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section-services padding-b-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="cr-services-border" data-aos="fade-up" data-aos-duration="2000">
+                        <div class="cr-service-slider swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="cr-services">
+                                        <div class="cr-services-image">
+                                            <i class="ri-red-packet-line"></i>
+                                        </div>
+                                        <div class="cr-services-contain">
+                                            <h4>ĐÓNG GÓI SẢN PHẨM</h4>
+                                            <p>Đảm bảo sự bảo quản và an toàn của sản phẩm.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="cr-services">
+                                        <div class="cr-services-image">
+                                            <i class="ri-customer-service-2-line"></i>
+                                        </div>
+                                        <div class="cr-services-contain">
+                                            <h4>HỖ TRỢ 24/7</h4>
+                                            <p>Đội ngũ luôn sẵn sàng hỗ trợ bạn bất kỳ lúc nào.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="cr-services">
+                                        <div class="cr-services-image">
+                                            <i class="ri-truck-line"></i>
+                                        </div>
+                                        <div class="cr-services-contain">
+                                            <h4>GIAO HÀNG TOÀN QUỐC</h4>
+                                            <p>Chúng tôi giao hàng toàn quốc, nhanh chóng, tiện lợi, an toàn.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="cr-services">
+                                        <div class="cr-services-image">
+                                            <i class="ri-money-dollar-box-line"></i>
+                                        </div>
+                                        <div class="cr-services-contain">
+                                            <h4>THANH TOÁN AN TOÀN</h4>
+                                            <p>Thủ tục thanh toán nhanh gọn, uy tín, bảo mật cao.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deal -->
+    <section class="section-deal padding-b-100">
+        <div class="bg-banner-deal">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="cr-deal-rightside">
+                            <div class="cr-deal-content" data-aos="fade-up" data-aos-duration="2000">
+                                <span><code>35%</code> SALE OFF</span>
+                                <h4 class="cr-deal-title">THỰC PHẨM HỮU CƠ</h4>
+                                <p>Một ly nước ép tươi ngon từ trái cây hữu cơ tươi mát. 
+                                    Không chứa chất bảo quản hay đường tinh luyện, chỉ có hương vị tự nhiên và lợi ích tốt cho sức khỏe.. </p>
+                                <div id="timer" class="cr-counter">
+                                    <div class="cr-counter-inner">
+                                        <h4>
+                                            <span id="days"></span>
+                                            Days
+                                        </h4>
+                                        <h4>
+                                            <span id="hours"></span>
+                                            Hrs
+                                        </h4>
+                                        <h4>
+                                            <span id="minutes"></span>
+                                            Min
+                                        </h4>
+                                        <h4>
+                                            <span id="seconds"></span>
+                                            Sec
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular product -->
+    <section class="section-popular margin-b-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-xxl-7 col-xl-6 col-lg-6 col-md-12" data-aos="fade-up" data-aos-duration="2000">
+                    <div class="cr-twocolumns-product">
+                        <div class="slick-slide">
+                            <div class="cr-product-card">
+                                <div class="cr-product-image">
+                                    <div class="cr-image-inner zoom-image-hover">
+                                        <img src="assets/img/product/9.jpg" alt="product-1">
+                                    </div>
+                                    <div class="cr-side-view">
+                                        <a href="javascript:void(0)" class="wishlist">
+                                            <i class="ri-heart-line"></i>
+                                        </a>
+                                        <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
+                                            role="button">
+                                            <i class="ri-eye-line"></i>
+                                        </a>
+                                    </div>
+                                    <a class="cr-shopping-bag" href="javascript:void(0)">
+                                        <i class="ri-shopping-bag-line"></i>
+                                    </a>
+                                </div>
+                                <div class="cr-product-details">
+                                    <div class="cr-brand">
+                                        <a href="listproduct.html">Snacks</a>
+                                        <div class="cr-star">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-line"></i>
+                                            <p>(4.5)</p>
+                                        </div>
+                                    </div>
+                                    <a href="detailproduct.html" class="title">Snack Nhân Socola Vị Hazelnut Gói 85g</a>
+                                    <p class="cr-price"><span class="new-price">$145</span> <span
+                                            class="old-price">$150</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slick-slide">
+                            <div class="cr-product-card">
+                                <div class="cr-product-image">
+                                    <div class="cr-image-inner zoom-image-hover">
+                                        <img src="assets/img/product/10.jpg" alt="product-1">
+                                    </div>
+                                    <div class="cr-side-view">
+                                        <a href="javascript:void(0)" class="wishlist">
+                                            <i class="ri-heart-line"></i>
+                                        </a>
+                                        <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
+                                            role="button">
+                                            <i class="ri-eye-line"></i>
+                                        </a>
+                                    </div>
+                                    <a class="cr-shopping-bag" href="javascript:void(0)">
+                                        <i class="ri-shopping-bag-line"></i>
+                                    </a>
+                                </div>
+                                <div class="cr-product-details">
+                                    <div class="cr-brand">
+                                        <a href="listproduct.html">Snacks</a>
+                                        <div class="cr-star">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <p>(5.0)</p>
+                                        </div>
+                                    </div>
+                                    <a href="detailproduct.html" class="title">Hạt dinh dưỡng ngũ cốc Trial Mix gói 24g</a>
+                                    <p class="cr-price"><span class="new-price">$120.25</span> <span
+                                            class="old-price">$123.25</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slick-slide">
+                            <div class="cr-product-card">
+                                <div class="cr-product-image">
+                                    <div class="cr-image-inner zoom-image-hover">
+                                        <img src="assets/img/product/1.jpg" alt="product-1">
+                                    </div>
+                                    <div class="cr-side-view">
+                                        <a href="javascript:void(0)" class="wishlist">
+                                            <i class="ri-heart-line"></i>
+                                        </a>
+                                        <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
+                                            role="button">
+                                            <i class="ri-eye-line"></i>
+                                        </a>
+                                    </div>
+                                    <a class="cr-shopping-bag" href="javascript:void(0)">
+                                        <i class="ri-shopping-bag-line"></i>
+                                    </a>
+                                </div>
+                                <div class="cr-product-details">
+                                    <div class="cr-brand">
+                                        <a href="listproduct.html">Rau củ</a>
+                                        <div class="cr-star">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-line"></i>
+                                            <p>(4.5)</p>
+                                        </div>
+                                    </div>
+                                    <a href="detailproduct.html" class="title">Chanh vàng tươi, mọng nước Hà Lan</a>
+                                    <p class="cr-price"><span class="new-price">$120</span> <span
+                                            class="old-price">$133</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slick-slide">
+                            <div class="cr-product-card">
+                                <div class="cr-product-image">
+                                    <div class="cr-image-inner zoom-image-hover">
+                                        <img src="assets/img/product/2.jpg" alt="product-1">
+                                    </div>
+                                    <div class="cr-side-view">
+                                        <a href="javascript:void(0)" class="wishlist">
+                                            <i class="ri-heart-line"></i>
+                                        </a>
+                                        <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
+                                            role="button">
+                                            <i class="ri-eye-line"></i>
+                                        </a>
+                                    </div>
+                                    <a class="cr-shopping-bag" href="javascript:void(0)">
+                                        <i class="ri-shopping-bag-line"></i>
+                                    </a>
+                                </div>
+                                <div class="cr-product-details">
+                                    <div class="cr-brand">
+                                        <a href="listproduct.html">Trái Cây</a>
+                                        <div class="cr-star">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <p>(5.0)</p>
+                                        </div>
+                                    </div>
+                                    <a href="detailproduct.html" class="title">Nước ép táo tươi nhiều chất hữu cơ</a>
+                                    <p class="cr-price"><span class="new-price">$120.25</span> <span
+                                            class="old-price">$123.25</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slick-slide">
+                            <div class="cr-product-card">
+                                <div class="cr-product-image">
+                                    <div class="cr-image-inner zoom-image-hover">
+                                        <img src="assets/img/product/3.jpg" alt="product-1">
+                                    </div>
+                                    <div class="cr-side-view">
+                                        <a href="javascript:void(0)" class="wishlist">
+                                            <i class="ri-heart-line"></i>
+                                        </a>
+                                        <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
+                                            role="button">
+                                            <i class="ri-eye-line"></i>
+                                        </a>
+                                    </div>
+                                    <a class="cr-shopping-bag" href="javascript:void(0)">
+                                        <i class="ri-shopping-bag-line"></i>
+                                    </a>
+                                </div>
+                                <div class="cr-product-details">
+                                    <div class="cr-brand">
+                                        <a href="listproduct.html">Trái Cây</a>
+                                        <div class="cr-star">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <p>(5.0)</p>
+                                        </div>
+                                    </div>
+                                    <a href="detailproduct.html" class="title">Dưa hấu Mai An Tiêm siêu ngọt, siêu mọng</a>
+                                    <p class="cr-price"><span class="new-price">$50.30</span> <span
+                                            class="old-price">$72.60</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xxl-5 col-xl-6 col-lg-6 col-md-12" data-aos="fade-up" data-aos-duration="2000">
+                    <div class="cr-products-rightbar">
+                        <img src="assets/img/product/products-rightview.jpg" alt="products-rightview">
+                        <div class="cr-products-rightbar-content">
+                            <h4>Tốt cho sức khỏe <br> Rau Củ</h4>
+                            <div class="cr-off">
+                                <span>25% <code>SALE OFF</code></span>
+                            </div>
+                            <div class="rightbar-buttons">
+                                <a href="listproduct.html" class="cr-button">MUA NGAY</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="section-testimonial padding-b-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="mb-30" data-aos="fade-up" data-aos-duration="2000">
+                        <div class="cr-banner">
+                            <h2>PHẢN HỒI TUYỆT VỜI CỦA KHÁC HÀNG</h2>
+                        </div>
+                        <div class="cr-banner-sub-title">
+                            <p>CarrotStore là một cửa hàng thực phẩm đáng tin cậy và chất lượng. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="cr-testimonial-slider swiper-container">
+                        <div class="swiper-wrapper cr-testimonial-pt-50">
+                            <div class="swiper-slide" data-aos="fade-up" data-aos-duration="2000">
+                                <div class="cr-testimonial">
+                                    <div class="cr-testimonial-image">
+                                        <img src="assets/img/testimonial/1.jpg" alt="businessman">
+                                    </div>
+                                    <div class="cr-testimonial-inner">
+                                        <span>Giám Đốc</span>
+                                        <h4 class="title">Nguyễn Nam Khánh</h4>
+                                        <p>“Tôi đã mua thực phẩm từ CarrotStore và tôi thực sự hài lòng với chất lượng và dịch vụ của họ. 
+                                            Nhân viên thân thiện và nhiệt tình, sản phẩm luôn tươi ngon và hữu cơ. Tôi không thể hài lòng hơn.”
+                                        </p>
+                                        <div class="cr-star">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" data-aos="fade-up" data-aos-duration="2000">
+                                <div class="cr-testimonial">
+                                    <div class="cr-testimonial-image">
+                                        <img src="assets/img/testimonial/2.jpg" alt="businessman">
+                                    </div>
+                                    <div class="cr-testimonial-inner">
+                                        <span>Siêu Mẫu</span>
+                                        <h4 class="title">Trần Thị Ngọc Trinh</h4>
+                                        <p>“CarrotStore đã trở thành lựa chọn hàng đầu của tôi khi mua thực phẩm hữu cơ. 
+                                            Họ không chỉ mang đến cho tôi những sản phẩm tốt nhất, mà còn giúp tôi có một phong cách sống lành mạnh hơn.”
+                                        </p>
+                                        <div class="cr-star">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-line"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" data-aos="fade-up" data-aos-duration="2000">
+                                <div class="cr-testimonial">
+                                    <div class="cr-testimonial-image">
+                                        <img src="assets/img/testimonial/3.jpg" alt="businessman">
+                                    </div>
+                                    <div class="cr-testimonial-inner">
+                                        <span>Trưởng Phòng</span>
+                                        <h4 class="title">Sky Nam</h4>
+                                        <p>“CarrotStore là một điểm đến tuyệt vời cho những người quan tâm đến sức khỏe và môi trường.
+                                            Tôi đã mua thực phẩm từ họ nhiều lần và chưa bao giờ thất vọng.Tôi thích cách làm việc của CarrotStore.”
+                                        </p>
+                                        <div class="cr-star">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog -->
+    <section class="section-blog padding-b-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="mb-30" data-aos="fade-up" data-aos-duration="2000">
+                        <div class="cr-banner">
+                            <h2>TIN MỚI NHẤT</h2>
+                        </div>
+                        <div class="cr-banner-sub-title">
+                            <p>Chúng tôi hiểu rằng việc nắm bắt thông tin cập nhật về nguồn gốc, chất lượng và lợi ích của thực phẩm hữu cơ là rất quan trọng. 
+                                Vì vậy, chúng tôi tự hào thông báo về cam kết kiêu hãnh của chúng tôi: Luôn cập nhật tin tức về thực phẩm mỗi ngày. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="cr-blog-slider swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" data-aos="fade-up" data-aos-duration="2000">
+                                <div class="cr-blog">
+                                    <div class="cr-blog-content">
+                                        <span><code>By Admin</code> | <a href="blog-left-sidebar.html">Healthy food</a></span>
+                                        <h5>Xu hướng ăn uống lành mạnh.</h5>
+                                        <a class="read" href="blog-detail-left-sidebar.html">Đọc thêm</a>
+                                    </div>
+                                    <div class="cr-blog-image">
+                                        <img src="assets/img/blog/2.jpg" alt="blog-2">
+                                        <div class="cr-blog-date">
+                                            <span>
+                                                10
+                                                <code>oct</code>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" data-aos="fade-up" data-aos-duration="2000">
+                                <div class="cr-blog">
+                                    <div class="cr-blog-content">
+                                        <span><code>By Admin</code> | <a href="blog-left-sidebar.html">Dinh dưỡng</a></span>
+                                        <h5>Lợi ích của thực phẩm hữu cơ.</h5>
+                                        <a class="read" href="blog-detail-left-sidebar.html">Đọc thêm</a>
+                                    </div>
+                                    <div class="cr-blog-image">
+                                        <img src="assets/img/blog/1.jpg" alt="blog-1">
+                                        <div class="cr-blog-date">
+                                            <span>
+                                                09<code>sep</code>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" data-aos="fade-up" data-aos-duration="2000">
+                                <div class="cr-blog">
+                                    <div class="cr-blog-content">
+                                        <span><code>By Admin</code> | <a href="blog-left-sidebar.html">Rau củ</a></span>
+                                        <h5>Tin tức về nguồn gốc và chất lượng.</h5>
+                                        <a class="read" href="blog-detail-left-sidebar.html">Đọc thêm</a>
+                                    </div>
+                                    <div class="cr-blog-image">
+                                        <img src="assets/img/blog/3.jpg" alt="blog-2">
+                                        <div class="cr-blog-date">
+                                            <span>
+                                                12
+                                                <code>oct</code>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" data-aos="fade-up" data-aos-duration="2000">
+                                <div class="cr-blog">
+                                    <div class="cr-blog-content">
+                                        <span><code>By Admin</code> | <a
+                                                href="blog-left-sidebar.html">Rau Củ</a></span>
+                                        <h5>Thực phẩm rau củ tốt mỗi ngày.</h5>
+                                        <a class="read" href="blog-detail-left-sidebar.html">Đọc them</a>
+                                    </div>
+                                    <div class="cr-blog-image">
+                                        <img src="assets/img/blog/2.jpg" alt="blog-3">
+                                        <div class="cr-blog-date">
+                                            <span>
+                                                22
+                                                <code>jan</code>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer padding-t-100 bg-off-white">
+        <div class="container">
+            <div class="row footer-top padding-b-100">
+                <div class="col-xl-4 col-lg-6 col-sm-12 col-12 cr-footer-border">
+                    <div class="cr-footer-logo">
+                        <div class="image">
+                            <img src="assets/img/logo/logo.png" alt="logo" class="logo">
+                            <img src="assets/img/logo/dark-logo.png" alt="logo" class="dark-logo">
+                        </div>
+                        <p>CarrotStore là thị trường lớn nhất của các sản phẩm tạp hóa. 
+                            Nhận nhu cầu hàng ngày của bạn là công việc từ cửa hàng của chúng tôi.</p>
+                    </div>
+                    <div class="cr-footer">
+                        <h4 class="cr-sub-title cr-title-hidden">Liên hệ chúng tôi
+                            <span class="cr-heading-res"></span>
+                        </h4>
+                        <ul class="cr-footer-links cr-footer-dropdown">
+                            <li class="location-icon">
+                               Tòa CT4, Thăng Long Capital, An Khánh, Hoài Đức, Hà Nội.
+                            </li>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1107.3216966815498!2d105.72173801518643!3d21.009811752287863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313453ed3b7692f7%3A0x8e2756990ec8745a!2sTh%C4%83ng%20Long%20Capital%20Apartment!5e0!3m2!1svi!2s!4v1715150911815!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <li class="mail-icon">
+                                <a href="javascript:void(0)">namkhanhnguyen0412@gmail.com</a>
+                            </li>
+                            <li class="phone-icon">
+                                <a href="javascript:void(0)"> 0388664859</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-3 col-sm-12 col-12 cr-footer-border">
+                    <div class="cr-footer">
+                        <h4 class="cr-sub-title">Công Ty
+                            <span class="cr-heading-res"></span>
+                        </h4>
+                        <ul class="cr-footer-links cr-footer-dropdown">
+                            <li><a href="about.html">Về Chúng Tôi</a></li>
+                            <li><a href="track-order.html">Thông Tin Giao Hàng</a></li>
+                            <li><a href="policy.html">Chính Sách Bảo Mật</a></li>
+                            <li><a href="terms.html">Điều Khoản & Điều Kiện</a></li>
+                            <li><a href="contact-us.html">Liên Hệ</a></li>
+                            <li><a href="faq.html">Trung Tâm Hỗ Trợ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-3 col-sm-12 col-12 cr-footer-border">
+                    <div class="cr-footer">
+                        <h4 class="cr-sub-title">Danh Mục
+                            <span class="cr-heading-res"></span>
+                        </h4>
+                        <ul class="cr-footer-links cr-footer-dropdown">
+                            <li><a href="listproduct.html">Sữa & Bánh</a></li>
+                            <li><a href="listproduct.html">Trái cây & Rau quả</a></li>
+                            <li><a href="listproduct.html">Snack & Gia vị</a></li>
+                            <li><a href="listproduct.html">Nước ép & Đồ uống</a></li>
+                            <li><a href="listproduct.html">Thịt & Cá</a></li>
+                            <li><a href="listproduct.html">Đồ ăn nhanh</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-12 col-sm-12 col-12 cr-footer-border">
+                    <div class="cr-footer cr-newsletter">
+                        <h4 class="cr-sub-title">Đăng ký nhận bản tin của chúng tôi
+                            <span class="cr-heading-res"></span>
+                        </h4>
+                        <div class="cr-footer-links cr-footer-dropdown">
+                            <form class="cr-search-footer">
+                                <input class="search-input" type="text" placeholder="Tìm kiếm ở đây...">
+                                <a href="javascript:void(0)" class="search-btn">
+                                    <i class="ri-send-plane-fill"></i>
+                                </a>
+                            </form>
+                        </div>
+                        <div class="cr-social-media">
+                            <span><a href="javascript:void(0)"><i class="ri-facebook-line"></i></a></span>
+                            <span><a href="javascript:void(0)"><i class="ri-twitter-x-line"></i></a></span>
+                            <span><a href="javascript:void(0)"><i class="ri-dribbble-line"></i></a></span>
+                            <span><a href="javascript:void(0)"><i class="ri-instagram-line"></i></a></span>
+                        </div>
+                        <div class="cr-payment">
+                            <div class="cr-insta-slider swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="#" class="cr-payment-image">
+                                            <img src="assets/img/insta/1.jpg" alt="insta">
+                                            <div class="payment-overlay"></div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="cr-payment-image">
+                                            <img src="assets/img/insta/2.jpg" alt="insta">
+                                            <div class="payment-overlay"></div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="cr-payment-image">
+                                            <img src="assets/img/insta/3.jpg" alt="insta">
+                                            <div class="payment-overlay"></div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="cr-payment-image">
+                                            <img src="assets/img/insta/4.jpg" alt="insta">
+                                            <div class="payment-overlay"></div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="cr-payment-image">
+                                            <img src="assets/img/insta/5.jpg" alt="insta">
+                                            <div class="payment-overlay"></div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="cr-payment-image">
+                                            <img src="assets/img/insta/6.jpg" alt="insta">
+                                            <div class="payment-overlay"></div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="cr-payment-image">
+                                            <img src="assets/img/insta/7.jpg" alt="insta">
+                                            <div class="payment-overlay"></div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="cr-payment-image">
+                                            <img src="assets/img/insta/8.jpg" alt="insta">
+                                            <div class="payment-overlay"></div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cr-last-footer">
+                <p>&copy; <span id="copyright_year"></span> <a href="index.html">Carrot</a>, Nam Khánh Food Store.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Tab to top -->
+    <a href="#Top" class="back-to-top result-placeholder">
+        <i class="ri-arrow-up-line"></i>
+        <div class="back-to-top-wrap">
+            <svg viewBox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+            </svg>
+        </div>
+    </a>
+
+    <!-- Giỏ hàng -->
+    <div class="cr-cart-overlay"></div>
+    <div class="cr-cart-view">
+        <div class="cr-cart-inner">
+            <div class="cr-cart-top">
+                <div class="cr-cart-title">
+                    <h6>Giỏ hàng của tôi</h6>
+                    <button type="button" class="close-cart">×</button>
+                </div>
+                <ul class="crcart-pro-items">
+                    <li>
+                        <a href="detailproduct.html" class="crside_pro_img"><img src="assets/img/product/4.jpg"
+                                alt="product-1"></a>
+                        <div class="cr-pro-content">
+                            <a href="detailproduct.html" class="cart_pro_title">Lựu Tươi</a>
+                            <span class="cart-price"><span>$56.00</span> x 1kg</span>
+                            <div class="cr-cart-qty">
+                                <div class="cart-qty-plus-minus">
+                                    <button type="button" class="plus">+</button>
+                                    <input type="text" placeholder="." value="1" minlength="1" maxlength="20"
+                                        class="quantity">
+                                    <button type="button" class="minus">-</button>
+                                </div>
+                            </div>
+                            <a href="javascript:void(0)" class="remove">×</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="detailproduct.html" class="crside_pro_img"><img src="assets/img/product/2.jpg"
+                                alt="product-2"></a>
+                        <div class="cr-pro-content">
+                            <a href="detailproduct.html" class="cart_pro_title">Táo Xanh</a>
+                            <span class="cart-price"><span>$75.00</span> x 1kg</span>
+                            <div class="cr-cart-qty">
+                                <div class="cart-qty-plus-minus">
+                                    <button type="button" class="plus">+</button>
+                                    <input type="text" placeholder="." value="1" minlength="1" maxlength="20"
+                                        class="quantity">
+                                    <button type="button" class="minus">-</button>
+                                </div>
+                            </div>
+                            <a href="javascript:void(0)" class="remove">×</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="detailproduct.html" class="crside_pro_img"><img src="assets/img/product/3.jpg"
+                                alt="product-3"></a>
+                        <div class="cr-pro-content">
+                            <a href="detailproduct.html" class="cart_pro_title">Dưa Hấu - Nhỏ</a>
+                            <span class="cart-price"><span>$48.00</span> x 5kg</span>
+                            <div class="cr-cart-qty">
+                                <div class="cart-qty-plus-minus">
+                                    <button type="button" class="plus">+</button>
+                                    <input type="text" placeholder="." value="1" minlength="1" maxlength="20"
+                                        class="quantity">
+                                    <button type="button" class="minus">-</button>
+                                </div>
+                            </div>
+                            <a href="javascript:void(0)" class="remove">×</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="cr-cart-bottom">
+                <div class="cart-sub-total">
+                    <table class="table cart-table">
+                        <tbody>
+                            <tr>
+                                <td class="text-left">Tổng phụ:</td>
+                                <td class="text-right">$300.00</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">VAT (20%):</td>
+                                <td class="text-right">$60.00</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Tổng cộng:</td>
+                                <td class="text-right primary-color">$360.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="cart_btn">
+                    <a href="cart.html" class="cr-button">Giỏ Hàng</a>
+                    <a href="checkout.html" class="cr-btn-secondary">Thanh Toán</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vendor Custom -->
+    <script src="assets/js/vendor/jquery-3.6.4.min.js"></script>
+    <script src="assets/js/vendor/jquery.zoom.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/vendor/mixitup.min.js"></script>
+
+    <script src="assets/js/vendor/range-slider.js"></script>
+    <script src="assets/js/vendor/aos.min.js"></script>
+    <script src="assets/js/vendor/swiper-bundle.min.js"></script>
+    <script src="assets/js/vendor/slick.min.js"></script>
+
+    <!-- Main Custom -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
